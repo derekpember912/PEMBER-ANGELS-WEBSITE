@@ -1,10 +1,11 @@
 /* ===== GENERAL PAGE STYLING ===== */
 :root{
-  --header-color: hsl(160, 100%, 20%);
-  --color-1: #0f4d00;
-  --text-color: #f0f0f0;
-  --accent-color: #006aff;
-  --color-nav: hsl(0, 0%, 50%);
+  --header-color:   hsl(108, 100%, 15%);
+  --color-nav-background: hsl(0, 0%, 94%);
+  --icon-color: hsl(0, 0%, 94%);
+  --text-color: hsl(251, 15%, 18%);
+  --accent-color: hsl(251, 31%, 76%);
+  --color-nav: hsl(0, 0%, 70%);
   --color-bg-dark: hsl(0, 0%, 90%);
   --color-bg: hsl(0, 0%, 95%);
   --color-bg-light: hsl(0, 0%, 100%);
@@ -38,8 +39,13 @@
   --max-width: 1280px;
   --width: 90%;
   --highlight: hsl(0, 0%, 100%);
+  --transition: 0.3s ease-in-out;
 }
 body.dark-mode {
+  --text-color: hsl(251, 15%, 80%);
+  --color-nav: hsl(0, 0%, 20%);
+  --color-nav-background: var(--color-card);
+  --accent-color: hsl(251, 31%, 26%);
   --color-bg-dark: hsl(0, 0%, 0%);
   --color-bg: hsl(0, 0%, 5%);
   --color-bg-light: hsl(0, 0%, 10%);
@@ -138,19 +144,19 @@ button {
 
 
 /* Make the first card span two columns */
-#content-layout > :nth-child(2) {
+.main-section > :nth-child(2) {
   grid-area: 1 / 2 / 3 / 2;
 }
-/* #content-layout > :nth-child(4) {
+/* .main-section > :nth-child(4) {
   grid-column: 1 / span 2;
 } */
 
-.welcome p, .goals p, .service p{
+.survey-intro p, .welcome p, .goals p, .service p, .application p{
   margin-top: 10px;
 }
 
 
-#content-layout {
+.main-section {
   margin-top: 1rem;
   display: grid;
   /* Two columns of equal width */
@@ -197,6 +203,19 @@ footer a{
   color: purple;
 }
 
+
+/* emergency page */
+.emergency-section{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  padding-left: 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* application page */
 .app{
   display: flex;
@@ -205,6 +224,14 @@ footer a{
 }
 .application p{
   margin-top: 10px;
+}
+
+.quality-body{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 /* 
 #child {
@@ -251,25 +278,12 @@ input, select, textarea {
 }
 
 
-/* ===== LISTS ===== */
-ul li {
-  margin-bottom: 10px;
-}
-
-label {
-  font-weight: bold;
-  color: #b72078; /* Deep pink labels */
-}
-
-small {
-  color: #888; /* Grey small text */
-}
-
 /* ===== TABLES ===== */
 table, td, th {
-  border: 1px solid black;
+  border: solid 1px var(--color-text);
   border-collapse: collapse;
   padding: 8px;
+  margin-top: 10px;
 }
 
 td {
@@ -457,16 +471,21 @@ td {
 
 .logo{
   z-index: 11;
+  /* display: block; */
+  /* height: 100%; */
+  
+
 }
 nav{
   width: 100vw;
-  height: 60px;
+  height: 70px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Slight shadow */
-  background-color: var(--color-1);
+  background-color: var(--color-nav-background);
   display: flex;
   justify-content: start;
   align-items: center;
+  border-bottom: 2px solid var(--header-color);
 }
 .links-container{
   height: 100%;
@@ -487,8 +506,10 @@ nav a{
   font-weight: bold;
   color: var(--text-color);
 }
-nav a:hover{
+.darkmode:hover, nav a:hover{
   background-color: var(--accent-color);
+  scale: 1.05;
+  transition: var(--transition);
 }
 nav .home-link{
   margin-right: auto;
@@ -503,10 +524,12 @@ nav svg{
 } */
 .darkmode{
   margin-left: auto;
-  padding: 8px;
-  border: solid 1px hsl(0, 0%, 95%);
-  border-radius: 2rem;
+  padding: 10px;
+  /* border: solid 2px var(--color-text); */
+  background: var(--color-nav);
+  border-radius: 50%;
 }
+
 
 #darkmode-active, #sidebar-active{
   display: none;
@@ -536,7 +559,6 @@ nav svg{
 
     padding-top: 20px;
     padding-right: 20px;
-    background-color: var(--color-1);
     box-shadow: -5px 0 5px rgba(1, 94, 29, 0.25);
     transition: 0.75s ease-out;
   }
@@ -563,15 +585,15 @@ nav svg{
     z-index: 9;
   }
 
-  .owner, #content-layout {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 95%;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
-  justify-content: space-between;
-  align-items: center;
+  .owner, .main-section {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    justify-content: space-between;
+    align-items: center;
   }
 
   

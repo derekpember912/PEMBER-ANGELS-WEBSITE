@@ -58,89 +58,95 @@
   </nav>
 
   <section class="quality-body">
-  <div id="child-card" class="quality">
-    <h2>Quality of Life Survey</h2>
-    <p class="black-text">
-      Please complete this brief survey to evaluate your pet's current well-being. 
-      It should help you to determine whether now is the right time to consider next steps with compassion. 
-      After you complete this survey, if you determine that your pet is in distress (e.g., pain, cannot breathe), contact your local emergency hospital immediately. You can find a list of hospitals 
-      by clicking on the Hospitals tab at the top of the screen. 
-    </p>
-  </div>
+    <div id="child-card" class="survey-intro">
+      <h2>Quality of Life Survey</h2>
+      <p class="black-text">
+        Please complete this brief survey to evaluate your pet's current well-being. 
+        It should help you to determine whether now is the right time to consider next steps with compassion. 
+        After you complete this survey, if you determine that your pet is in distress (e.g., pain, cannot breathe), contact your local emergency hospital immediately. You can find a list of hospitals 
+        by clicking on the Hospitals tab at the top of the screen. 
+      </p>
+    </div>
 
 
-
-<form>
-  <table>
-    <tr>
-      <td>Pain: Does your pet seem in pain?</td>
-      <td>
-        <select name="pain">
-          <option value="">Select</option>
-          <option value="no">No</option>
-          <option value="yes">Yes</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Eating & Drinking: Which term best describes your pet’s appetite?</td>
-      <td>
-        <select name="appetite">
-          <option value="">Select</option>
-          <option value="Good—eats own food and drinks water">Good—eats own food and drinks water</option>
-          <option value="Some interest in food">Some interest in food</option>
-          <option value="Only interested in people food">Only interested in people food</option>
-          <option value="No interest in food or water">No interest in food or water</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Mobility: Which term best describes your pet’s ability to move currently?</td>
-      <td>
-        <select name="mobility">
-          <option value="">Select</option>
-          <option value="walking">Walking</option>
-          <option value="struggling">Struggling to move</option>
-          <option value="cannot_move">Cannot move</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Behavior: Which changes in your pet’s behavior do you see? (Check all that apply)</td>
-      <td>
-        <label><input type="checkbox" name="behavior" value="fear_or_aggression"> Change in fear or aggression</label><br>
-        <label><input type="checkbox" name="behavior" value="hiding"> Hiding</label><br>
-        <label><input type="checkbox" name="behavior" value="decreased_grooming"> Decreased grooming</label><br>
-        <label><input type="checkbox" name="behavior" value="toileting_accidents"> Toileting accidents</label>
-      </td>
-    </tr>
-    <tr>
-      <td>Energy level: Which term best describes your pet’s energy level?</td>
-      <td>
-        <select name="energy">
-          <option value="">Select</option>
-          <option value="Normal energy level">Normal energy level</option>
-          <option value="Lethargic">Lethargic</option> <!--BIG WORD  -->
-          <option value="No energy">No energy</option>
-          <!-- <option value="low">No/Low Energy</option>
-          <option value="medium">Medium Energy</option>
-          <option value="high">High Energy</option> -->
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Respiration: Does your pet struggle to breathe due to metastatic cancer or a known heart or lung disease?</td>
-      <td>
-        <select name="respiration">
-          <option value="">Select</option>
-          <option value="no">No</option>
-          <option value="yes">Yes</option>
-        </select>
-      </td>
-    </tr>
-  </table>
-</form>
-<p>If you wish to take a more in-depth quality of life survey with a calculator to determine when it is time to make end-of-life decision, then click here: <a href="https://www.petlosspreplanning.com/">petlosspreplanning</a> Otherwise, if you think you are ready to move forward with euthanasia, please click the Services and Application tabs located at the top of the screen.</p>
+    <div id="child-card" class="survey">
+      <form>
+        <table>
+          <tr>
+            <td>Pain: Does your pet seem in pain?</td>
+            <td>
+              <select name="pain">
+                <option value="">Select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Eating & Drinking: Which term best describes your pet's appetite?</td>
+            <td>
+              <select name="appetite">
+                <option value="">Select</option>
+                <option value="Good—eats own food and drinks water">Good—eats own food and drinks water</option>
+                <option value="Some interest in food">Some interest in food</option>
+                <option value="Only interested in people food">Only interested in people food</option>
+                <option value="No interest in food or water">No interest in food or water</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Mobility: Which term best describes your pet's ability to move currently?</td>
+            <td>
+              <select name="mobility">
+                <option value="">Select</option>
+                <option value="walking">Walking</option>
+                <option value="struggling">Struggling to move</option>
+                <option value="cannot_move">Cannot move</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Behavior: Which changes in your pet's behavior do you see? (Check all that apply)</td>
+            <td>
+              <label><input type="checkbox" name="behavior" value="fear_or_aggression"> Change in fear or aggression</label><br>
+              <label><input type="checkbox" name="behavior" value="hiding"> Hiding</label><br>
+              <label><input type="checkbox" name="behavior" value="decreased_grooming"> Decreased grooming</label><br>
+              <label><input type="checkbox" name="behavior" value="toileting_accidents"> Toileting accidents</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Energy level: Which term best describes your pet's energy level?</td>
+            <td>
+              <select name="energy">
+                <option value="">Select</option>
+                <option value="Normal energy level">Normal energy level</option>
+                <option value="Lethargic">Lethargic</option> <!--BIG WORD  -->
+                <option value="No energy">No energy</option>
+                <!-- <option value="low">No/Low Energy</option>
+                <option value="medium">Medium Energy</option>
+                <option value="high">High Energy</option> -->
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Respiration: Does your pet struggle to breathe due to metastatic cancer or a known heart or lung disease?</td>
+            <td>
+              <select name="respiration">
+                <option value="">Select</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div id="child-card">
+      <p>If you wish to take a more in-depth quality of life survey with a calculator to determine when it is time to make end-of-life decision, then click here: <a href="https://www.petlosspreplanning.com/">petlosspreplanning</a></p>
+    </div>
+    <div id="child-card">
+      <p>If you think you are ready to move forward with euthanasia, please click the Services and Application tabs located at the top of the screen.</p>
+    </div>
 </section>
 <footer>
     <p>Contact Dr. Pember at <a href="https://mail.google.com/mail/u/0/?ogbl#inbox?compose=CllgCJlFDPpTlqhsdtzxSNzGFDjvMfNFTdVknZVrKvkvdqFkmPWxKsfTFbmCHbBDmqNbKxfxptg" target="_blank">pembersangels@gmail.com</a></p>
