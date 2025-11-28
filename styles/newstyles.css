@@ -74,6 +74,11 @@ body.dark-mode {
      0px 4px 4px hsla(0, 0%, 0%, 0.15);
   --highlight: hsl(0, 0%, 60%);
 }
+
+.divider {
+    height: 20px;
+}
+
 h1,
 h2,
 h3,
@@ -142,16 +147,15 @@ button {
 }
 
 
-
 /* Make the first card span two columns */
-.main-section > :nth-child(2) {
+.main-section > :nth-child(3) {
   grid-area: 1 / 2 / 3 / 2;
 }
 /* .main-section > :nth-child(4) {
   grid-column: 1 / span 2;
 } */
 
-.survey-intro p, .welcome p, .goals p, .service p, .application p{
+.survey-intro p, .welcome p, .service p, .application p{
   margin-top: 10px;
 }
 
@@ -161,7 +165,7 @@ button {
   display: grid;
   /* Two columns of equal width */
   grid-template-columns: 1fr 1fr; 
-  grid-template-rows: .2fr .2fr 2fr; /* One row for the first card, two for the rest */  
+  grid-template-rows: .8fr .6fr; /* One row for the first card, two for the rest */  
   /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   width: 95%;
   gap: 2rem;
@@ -187,6 +191,42 @@ button {
   grid-template-rows: .1fr 1fr;
   gap: 1rem;
   justify-content: center;
+}
+
+
+.modern-btn {
+  /* 1. Layout & Sizing */
+  display: inline-block; /* Essential for <a> tags */
+  padding: 12px 24px;
+  
+  /* 2. Text Styling */
+  text-decoration: none; /* Removes the default underline */
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  
+  /* 3. Button Look (Color & Shape) */
+  background-color: #260086; /* Dark purple */
+  border-radius: 8px; /* Rounded corners */
+  border: none;
+  
+  /* 4. Smooth Animation */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect - What happens when mouse goes over it */
+.modern-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px); /* Moves button up slightly */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Shadow grows */
+}
+
+/* Active Effect - When clicked */
+.modern-btn:active {
+  transform: translateY(0); /* Pushes back down */
 }
 
 /* footer */
@@ -469,12 +509,14 @@ td {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-.logo{
+.logo a{
   z-index: 11;
-  /* display: block; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  column-gap: 10px;
   /* height: 100%; */
-  
-
 }
 nav{
   width: 100vw;
@@ -490,11 +532,12 @@ nav{
 .links-container{
   height: 100%;
   width: 100%;
-  display: flex;
+  display: flex; 
   flex-direction: row;
+  justify-content: end;
   align-items: center;
 }
-nav a{
+#nav-link{
   height: 100%;
   padding: 23px 20px;
   margin: 10px;
@@ -506,14 +549,14 @@ nav a{
   font-weight: bold;
   color: var(--text-color);
 }
-.darkmode:hover, nav a:hover{
+.darkmode:hover, #nav-link:hover{
   background-color: var(--accent-color);
   scale: 1.05;
   transition: var(--transition);
 }
-nav .home-link{
+/* nav .home-link{
   margin-right: auto;
-}
+} */
 nav svg{
   fill: var(--text-color);
   cursor: pointer;
@@ -550,7 +593,7 @@ nav svg{
   .links-container{
     flex-direction: column;
     align-items: flex-start;
-
+    justify-content: start;
     position: fixed;
     top: 0;
     left: -100%;
@@ -561,8 +604,9 @@ nav svg{
     padding-right: 20px;
     box-shadow: -5px 0 5px rgba(1, 94, 29, 0.25);
     transition: 0.75s ease-out;
+    background-color: var(--color-bg);
   }
-  nav a{
+  #nav-link{
     box-sizing: border-box;
     height: auto;
     width: 100%;
