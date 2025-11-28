@@ -1,12 +1,12 @@
 /* ===== GENERAL PAGE STYLING ===== */
 :root{
   --header-color:   hsl(108, 100%, 15%);
-  --color-nav-background: hsl(0, 0%, 94%);
+  --color-nav-background: hsl(0, 0%, 97%);
   --icon-color: hsl(0, 0%, 94%);
   --text-color: hsl(251, 15%, 18%);
   --accent-color: hsl(251, 31%, 76%);
   --color-nav: hsl(0, 0%, 70%);
-  --color-bg-dark: hsl(0, 0%, 90%);
+  --color-bg-dark: hsl(0, 0%, 88%);
   --color-bg: hsl(0, 0%, 95%);
   --color-bg-light: hsl(0, 0%, 100%);
   --color-bg-gradient: linear-gradient(
@@ -40,13 +40,15 @@
   --width: 90%;
   --highlight: hsl(0, 0%, 100%);
   --transition: 0.3s ease-in-out;
+  --link-color: #2563eb;
+  --link-color-hover: #1d4ed8;
 }
 body.dark-mode {
   --text-color: hsl(251, 15%, 80%);
   --color-nav: hsl(0, 0%, 20%);
-  --color-nav-background: var(--color-card);
+  --color-nav-background: hsl(0, 2%, 7%);
   --accent-color: hsl(251, 31%, 26%);
-  --color-bg-dark: hsl(0, 0%, 0%);
+  --color-bg-dark: hsl(0, 0%, 4%);
   --color-bg: hsl(0, 0%, 5%);
   --color-bg-light: hsl(0, 0%, 10%);
   --color-bg-gradient: linear-gradient(
@@ -165,12 +167,12 @@ button {
   display: grid;
   /* Two columns of equal width */
   grid-template-columns: 1fr 1fr; 
-  grid-template-rows: .8fr .6fr; /* One row for the first card, two for the rest */  
+  grid-template-rows: .8fr .6fr;   
   /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   width: 95%;
   gap: 2rem;
   padding: 1.5rem 2rem;
-  place-self: center
+  place-self: center;
 }
 
 #child-card {
@@ -240,7 +242,11 @@ footer {
 }
 
 footer a{
-  color: purple;
+  color: var(--link-color);
+}
+footer a:hover{
+  color: var(--link-color-hover);
+  text-decoration: underline; /* Adds underline back on hover for clarity */
 }
 
 
@@ -264,6 +270,15 @@ footer a{
 }
 .application p{
   margin-top: 10px;
+}
+
+.application a{
+  color: var(--link-color);
+}
+
+.application a:hover{
+  color: var(--link-color-hover);
+  text-decoration: underline;
 }
 
 .quality-body{
@@ -521,7 +536,7 @@ td {
 nav{
   width: 100vw;
   height: 70px;
-  padding: 20px;
+  padding: 40px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Slight shadow */
   background-color: var(--color-nav-background);
   display: flex;
@@ -537,6 +552,15 @@ nav{
   justify-content: end;
   align-items: center;
 }
+.open-sidebar-button svg:hover{
+  scale: 1.2;
+  transition: var(--transition);
+}
+.links-container svg:hover{
+  fill: rgb(182, 24, 24);
+  scale: 1.2;
+  transition: var(--transition);
+}
 #nav-link{
   height: 100%;
   padding: 23px 20px;
@@ -545,7 +569,7 @@ nav{
   align-items: center;
   text-decoration: none;
   background: var(--color-nav); /* Blue button background */
-  border-radius: 6px;
+  border-radius: 2px;
   font-weight: bold;
   color: var(--text-color);
 }
