@@ -64,14 +64,15 @@
     
   </nav>
 
-<!-- Pricing section container -->
-<div class="pricing-container">
-  
-  <!-- Introductory note for users -->
-  <p>This price chart will provide you with information regarding the services you are interested in purchasing. Please indicate specifics under "Extra fees." You will need to add your pet's weight, type, and your preferences into the calculator. A 3% credit card surcharge fee will be included in the calculation.</p>
+  <section class="service-body">
+
+    <!-- Introductory note for users -->
+    <div id="child-card" class="service-intro">
+      <p>This price chart will provide you with information regarding the services you are interested in purchasing. Please indicate specifics under "Extra fees." You will need to add your pet's weight, type, and your preferences into the calculator. A 3% credit card surcharge fee will be included in the calculation.</p>
+    </div>
   
   <!-- Left column: Euthanasia service prices -->
-  <div class="left-pricing">
+  <div id="child-card"  class="left-pricing">
     <h2>Euthanasia Services</h2>
     <!-- Euthanasia price list -->
     <!-- <ul>
@@ -119,7 +120,7 @@
 
 
   <!-- Right column: Cremation service prices -->
-  <div class="right-pricing">
+  <div  id="child-card"  class="right-pricing">
     <h2>Aftercare services </h2>
     <p> Please consider what you would like to do with the remains prior to the Euthanasia appointment. You will need to tell the staff whether you wish to keep your pet’s body for burial or cremation or have us transport it for cremation with Final Gift.</p>
     <p>If you choose cremation with Final Gift, please go to their site to look at your options—click here: <a href="https://www.finalgift.com/memorial-products-new/">https://www.finalgift.com/</a>. In addition to cremation, they offer other services, including viewing and visitation, grief support resources, pet loss preplanning, memorial products, etc. We will help you set up an account with them when we arrive at your home.</p>
@@ -153,20 +154,19 @@
       <li>151+ lbs: $425</li>
     </ul> -->
   </div>
-</div>
 
 
 
 <!-- Form for calculating estimated total price -->
-<div class="bottom-right-form">
+<!-- <div class="bottom-right-form">
   <h2>Estimated Total Price</h2>
-  <form id="estimateForm">
+  <form id="estimateForm"> -->
     <!-- Pet weight input -->
-    <label>Pet Weight (lbs):</label>
-    <input type="number" id="petWeight" required>
+    <!-- <label>Pet Weight (lbs):</label>
+    <input type="number" id="petWeight" required> -->
 
     <!-- Pet type selection -->
-    <label>Pet Type:</label>
+    <!-- <label>Pet Type:</label>
     <select id="petType">
       <option value="Select">Select</option>
       <option value="cat">Cat</option>
@@ -175,10 +175,10 @@
       <option value="large">Large Dog (61-99lbs)</option>
       <option value="xlarge">X-Large Dog (100+lbs)</option>
       <option value="behavioral">Behavioral Euthanasia</option>
-    </select>
+    </select> -->
 
     <!-- Cremation preference selection -->
-    <label>Cremation remains removal:</label>
+    <!-- <label>Cremation remains removal:</label>
     <select id="cremationRe">
       <option value="Select">Select</option>
       <option value="Westchester">Westchester</option>
@@ -186,11 +186,11 @@
       <option value="Rockland">Rockland</option>
       <option value="Orange">Orange</option>
       <option value="None">None</option>
-    </select>
+    </select> -->
 
 
     <!-- Extra fees selection form -->
-    <h3>Extra Fees (check all that apply)</h3>
+    <!-- <h3>Extra Fees (check all that apply)</h3>
 <form id="extraFeesForm">
   <label>
     Weekend (50)<br>
@@ -211,17 +211,19 @@
     Aggressive Pet ($100)<br>
     <input type="checkbox" id="aggressivePet">
   </label>
-</form>
+</form> -->
 
     
     <!-- Calculate button triggers calculateTotal() from JS -->
-    <button type="button" onclick="calculateTotal()">Calculate</button>
+    <!-- <button type="button" onclick="calculateTotal()">Calculate</button>
   </form>
-</div>
+</div> -->
 
+</section>
 <div class="divider"></div>
 <hr>
 <div class="divider"></div>
+
 
 <!-- Footer with contact information -->
 <footer>

@@ -288,6 +288,17 @@ footer a:hover{
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.service-body > :nth-child(1) {
+  grid-area: 1 / 1 / 1 / 3;
+}
+.service-body{  
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: .25fr 1fr;  
+  gap: 1rem;
+}
 /* 
 #child {
   flex: 0 1 auto;
