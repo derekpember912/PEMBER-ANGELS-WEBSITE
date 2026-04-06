@@ -5,6 +5,7 @@
   --icon-color: hsl(0, 0%, 94%);
   --text-color: hsl(251, 15%, 18%);
   --accent-color: hsl(251, 31%, 76%);
+  --button-color: hsl(251, 31%, 60%);
   --color-nav: hsl(0, 0%, 70%);
   --color-bg-dark: hsl(0, 0%, 88%);
   --color-bg: hsl(0, 0%, 95%);
@@ -44,7 +45,7 @@
   --link-color-hover: #1d4ed8;
 }
 body.dark-mode {
-  --text-color: hsl(251, 15%, 80%);
+  --text-color: hsl(251, 15%, 85%);
   --color-nav: hsl(0, 0%, 20%);
   --color-nav-background: hsl(0, 2%, 7%);
   --accent-color: hsl(251, 31%, 26%);
@@ -209,8 +210,8 @@ button {
   color: #ffffff;
   
   /* 3. Button Look (Color & Shape) */
-  background-color: #260086; /* Dark purple */
-  border-radius: 8px; /* Rounded corners */
+  background-color: var(--button-color);
+  border-radius: 50px;
   border: none;
   
   /* 4. Smooth Animation */
