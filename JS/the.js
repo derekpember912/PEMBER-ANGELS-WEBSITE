@@ -1,3 +1,5 @@
+
+
 // Function to switch between visible sections on the page
 function showSection(id) {
   // Hide all sections
@@ -10,6 +12,16 @@ function showSection(id) {
 
 // Run this code only after the DOM (HTML content) is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Find the checkbox element darkmode-active
+  const themeToggle = document.getElementById('darkmode-active');
+  // Add a check to be extra safe
+  if (themeToggle) {
+    themeToggle.addEventListener('change', function() {
+      console.log("toggle dark mode")
+      document.body.classList.toggle('dark-mode');
+    });
+  }
 
   // Price calculator function (attached to the window object so it can be used from HTML)
   window.calculateTotal = function () {
