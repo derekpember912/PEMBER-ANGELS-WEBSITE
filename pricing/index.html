@@ -65,16 +65,34 @@
   </nav>
 
   <section class="pricing-body">
-    <div class="welcome" id="child-card">
-      <h2>Pricing</h2>
-      <h3>Pet Information</h3>
+    <div class="pricing-form" id="child-card">
+      <h2>Pricing Estimate</h2>
       <form action="index.php" method="post">
+        <h3>Pet Information</h3>  
+        <label for="pet-type">Pet Type:</label>
+        <select id="pet-type" name="pet-type" required>
+          <option value="">Select a pet type</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="other">Other</option>
+        </select>
+        <!-- if not dog or cat, please contact us for a custom quote. -->
         <label for="pet-weight">Pet Weight:</label>
-        <input type="text" id="pet-weight" placeholder="Weight in lb">
+        <input type="number" id="pet-weight" placeholder="Weight in pounds (lbs)" min="0" max="200" required>
+        <h3>Location</h3> 
+        <label for="location">Location:</label> 
+        <select id="location" name="location" required>
+          <option value="">Select a location</option>
+          <option value="Westchester">Westchester NY</option>
+          <option value="Putnam">Putnam NY</option>
+          <option value="Rockland">Rockland NY</option>
+          <option value="Orange">Orange NY</option>
+          <option value="other">Other</option>
+          <!-- if not in these areas, please contact us for a custom quote. -->
+        </select>
+        <button class="modern-btn" type="reset">Reset</button>
+        <button class="modern-btn" type="submit">Calculate Price</button>
       </form>
-      <h3>Location</h3>
-      <div class="divider"></div>
-      <a href="/services" class="modern-btn">Calculate Price</a>
     </div>
 
     <div class="welcome" id="child-card">
