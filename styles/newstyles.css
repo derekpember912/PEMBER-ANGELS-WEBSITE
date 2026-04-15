@@ -293,6 +293,15 @@ footer a:hover{
   gap: 1rem;
 }
 
+
+.pricing-body{  
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: .25fr 1fr; 
+  grid-template-rows: 1fr 1fr .5fr;  
+  gap: 1rem;
+}
+
 .service-body > :nth-child(1) {
   grid-area: 1 / 1 / 1 / 3;
 }
