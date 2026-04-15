@@ -1,4 +1,5 @@
 /* ===== GENERAL PAGE STYLING ===== */
+/* light mode defualt colors */
 :root{
   --header-color:   hsl(108, 100%, 15%);
   --color-nav-background: hsl(0, 0%, 97%);
@@ -44,11 +45,13 @@
   --link-color: #2563eb;
   --link-color-hover: #1d4ed8;
 }
+/* dark mode colors */
 body.dark-mode {
   --text-color: hsl(251, 15%, 85%);
   --color-nav: hsl(0, 0%, 20%);
   --color-nav-background: hsl(0, 2%, 7%);
   --accent-color: hsl(251, 31%, 26%);
+  --button-color: hsl(251, 31%, 42%);
   --color-bg-dark: hsl(0, 0%, 4%);
   --color-bg: hsl(0, 0%, 5%);
   --color-bg-light: hsl(0, 0%, 10%);
